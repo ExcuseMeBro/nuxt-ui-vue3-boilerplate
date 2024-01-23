@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@iconify/json": "^2.2.172",
     "nuxt-ui-vue": "^1.0.2-beta.1",
     "vue": "^3.3.8"
   },

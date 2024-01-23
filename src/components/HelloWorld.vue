@@ -98,6 +98,18 @@ const peoples = [
 ];
 
 const selected = ref(peoples[0]);
+
+const icons = [
+  "ph:alarm-duotone",
+  "mdi:adobe",
+  "ic:baseline-ac-unit",
+  "solar:accessibility-line-duotone",
+  "tabler:brand-meta",
+  "carbon:asset-confirm",
+  "lucide:arrow-up-right-from-circle",
+  "system-uicons:calendar-move",
+  "uim:history",
+];
 </script>
 
 <template>
@@ -112,7 +124,10 @@ const selected = ref(peoples[0]);
     :ui="{ rounded: 'rounded-full' }"
     @click="showToaster"
   />
-  <UIcon name="i-heroicons-light-bulb" />
+  <br />
+  <div class="flex items-center space-x-3">
+    <UIcon v-for="(icon, idx) in icons" :key="idx" :name="icon" size="2xl" />
+  </div>
   <UTable :rows="people" />
   <pre>Toggle: {{ toggle }}</pre>
   <UToggle v-model="toggle" />
